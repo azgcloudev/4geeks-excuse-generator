@@ -1,1 +1,43 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+/*
+font-family: 'Bungee', cursive;
+font-family: 'Montserrat', sans-serif;
+*/
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: url(/src/assets/img/bg-image.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.main-box {
+	/* background-image: url(/src/assets/img/excuse-image.jpg); */
+	border-radius: 10px;
+	margin: auto;
+	margin-top: 10%;
+	padding: 30px;
+	max-width: 700px;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 10px 15px 20px rgb(131, 131, 131);
+}
+
+h1 {
+	font-size: 3rem;
+	font-family: 'Bungee', cursive;
+	letter-spacing: 1.5px;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+}
+
+p:hover {
+	font-size: 1.6rem;
+	/* border-bottom: 1px solid #000; */
+}
