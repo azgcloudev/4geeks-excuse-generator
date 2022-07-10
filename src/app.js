@@ -1,4 +1,5 @@
 const initialLoad = () => {
+	// eslint-disable-next-line no-console
 	console.log("JS connected to HTML");
 
 	let who = ["The dog", "My grandma", "His turtle", "My bird"];
@@ -12,17 +13,28 @@ const initialLoad = () => {
 		"while I was praying"
 	];
 
-	let excuseOptions = ["who", "action", "what", "when"];
+	let excuseOptions = [who, action, what, when];
+
+	const randomNumber = max => Math.floor(Math.random() * max);
 
 	const generatExcuse = () => {
-		let displayPhrase = ""; // variable to store the created excuse phrase
-		// The loop creates 5 different phrases
-		for (let i = 1; i < 6; i++) {
-			let randomArrayIndex = 0;
-			if (i < 5) {
-			}
+		let displayPhrase = []; // array to store the created excuse phrase
+		let excuseOptionslength = excuseOptions.length;
+
+		//Loop to create a excuse from the arrays
+		for (let i = 0; i < excuseOptionslength; i++) {
+			let excuseOptionLen = excuseOptions[i].length;
+			displayPhrase.push(excuseOptions[i][randomNumber(excuseOptionLen)]);
 		}
+
+		return displayPhrase;
 	};
+
+	let stringArray = generatExcuse();
+
+	let finalResult = stringArray.join(" ");
+
+	document.getElementById("excuse").innerText = finalResult;
 };
 
 window.addEventListener("DOMContentLoaded", initialLoad);
